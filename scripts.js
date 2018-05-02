@@ -1,12 +1,12 @@
 const sections = document.querySelectorAll('.sections	> *');
 
-function hideSections () {
+function toggleSections () {
 	const selectedDiv = this;
 	sections.forEach(function(section){
 			if(!(selectedDiv===section)){
-				section.classList.toggle('hidesection');
+				section.classList.toggle('section-hidden');
 			}
 	});
 }
 
-sections.forEach((section) => section.addEventListener('click', hideSections));
+sections.forEach((section) => section.addEventListener('click', toggleSections));
